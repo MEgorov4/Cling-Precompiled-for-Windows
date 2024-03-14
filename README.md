@@ -1,28 +1,45 @@
-# cling.for.windows
+# Cling for Windows with Visual Studio 2019 SDK
+
+This repository contains a precompiled version of the interactive C++ interpreter `cling` for Windows, configured to work with Microsoft Visual Studio 2019 and Windows 10 SDK.
+
+## Installation
+
+Follow these steps to use `cling` in your development environment:
+
+### Step 1: Install Visual Studio 2019
+
+Install Visual Studio 2019 with the C++ development component and Windows 10 SDK. This is necessary for the correct operation of `cling` and ClingVS19EnvLauncher.
+
+- [Download Visual Studio 2019](https://visualstudio.microsoft.com/vs/older-downloads/)
+
+During the installation process, select the "Desktop development with C++" workload to install the C++ compiler and necessary tools.
+
+### Step 2: Add `cling.exe` to PATH
+
+Add the path to `cling.exe` to the `PATH` environment variable to make `cling` accessible from the command line anywhere.
+
+1. Determine the path to `cling.exe` on your system.
+2. Open "System Properties" > "Advanced system settings" > "Environment Variables".
+3. Find the `Path` variable in the "System variables" section and select "Edit".
+4. Add the path to `cling.exe` at the end of the list.
+
+### Step 3: Add `vcvarsall.bat` to PATH
+
+Similarly, add the path to `vcvarsall.bat` to the `PATH` environment variable. This ensures the correct environment setup for `cling`.
+
+`vcvarsall.bat` is typically located at:
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat
+
+### Step 4: Run ClingVS19EnvLauncher
+
+After configuring `PATH`, use `ClingVS19EnvLauncher` to launch `cling` with the correct environment for Visual Studio 2019 and Windows 10 SDK. `ClingVS19EnvLauncher` will automatically set the necessary environment variables.
 
 ## Usage
-1. [_Download and install Visual Studio_](https://visualstudio.microsoft.com/downloads/)&nbsp;<sup><em>1</em></sup>
-2. [_Download and unzip this project's distributable_](https://github.com/boydingham/cling.for.windows/blob/main/cling-win-amd64-1.0~dev-d78d1a0.zip)
-3. Add the unzipped binary's _`bin`_ directory to your _`PATH`_
-4. Follow [_these original cling usage instructions_](https://github.com/root-project/cling#usage)&nbsp;<sup><em>2</em></sup>
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+To run `cling`:
+ClingVS19EnvLauncher.exe
 
+Now you can use the interactive C++ interpreter `cling` to execute C++ code on the fly.
 
+---
 
-
-——
-<br />
-
-<sup><sup><sup><em>1</em></sup><em>&nbsp;Because&nbsp;the&nbsp;cling&nbsp;binary&nbsp;was&nbsp;linked&nbsp;with&nbsp;DLLs&nbsp;provided&nbsp;by&nbsp;Visual&nbsp;Studio&nbsp;2019's&nbsp;SDK.</em></sup></sup>
-<br />
-<sup><sup><sup><em>2</em></sup><em>&nbsp;Also&nbsp;watch&nbsp;[Dmitri&nbsp;Nesteruk's&nbsp;excellent&nbsp;cling&nbsp;tutorial&nbsp;video](https://www.youtube.com/watch?v=Lbi7MLS03Yc&t=323s).&nbsp;Plus&nbsp;[this&nbsp;one](https://youtu.be/f9Xfh8pv3Fs)&nbsp;by&nbsp;@Axel-Naumann.</em></sup></sup>
-<br />
