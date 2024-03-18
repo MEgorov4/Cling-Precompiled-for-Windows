@@ -1,6 +1,7 @@
 # Cling for Windows with Visual Studio 2019 SDK
 
 This repository contains a precompiled version of the interactive C++ interpreter `cling` for Windows, configured to work with Microsoft Visual Studio 2019 and Windows 10 SDK.
+`VS19 16.11.34 tested`
 
 ## Installation
 
